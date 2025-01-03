@@ -1,0 +1,394 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    width:100vw;
+    height:100%;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+main{
+    width:100%;
+    height:100vh;
+    background-color: #003e2900;
+}
+
+nav{
+    background-color: #ffffff;
+    height:5.7vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding:0 6vw;
+    z-index: 99;
+    position: relative;
+    /* top:0; */
+    /* border-radius:7vw; */
+    /* border: 2px solid red; */
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.443);
+}
+
+#logo{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+#logo_img h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2.4vw;
+    gap:0.3vw;
+    color: #003e29;
+}
+
+#logo_img img{
+    height:2.4vw;
+    fill:#003e29;
+}
+
+#box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5vw;;
+    gap:4vw;
+    
+}
+
+#box2 span{
+    font-family: 'Segoe UI';
+    font-size:1.22vw;
+    font-weight:750;
+    /* border: 1px solid black; */
+    &:hover{
+       cursor: pointer;
+       transform: scale(1.1);
+    }
+}
+
+#box2 span a{
+    text-decoration: none;
+    color:black;
+    
+}
+#hero{
+    width:100%;
+    height:89vh;
+    box-sizing: border-box;
+    background-image: url("new.jpeg");
+    background-size: cover;
+    filter: blur(0px);
+    
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+#hero1{
+    width:100%;
+    height: 89vh;
+    box-sizing: border-box;
+    padding:8vw;
+    padding-left: 5.8vw;
+    position:absolute;
+    top:5.7vw;
+    margin: 2vw 0;
+    text-align: center;
+    
+    /* border:2px solid red */
+}
+
+#content h1{
+    color:rgb(255, 239, 239);
+    font-size:5.7vw;
+    line-height: 6vw;
+}
+
+#just{
+    height: 4vw;
+    /* border: 2px solid red; */
+    color:white;
+    font-size: 1.5vw;
+    font-weight:500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:3vw 0;
+    align-items: center;
+    box-sizing: border-box;  
+    /* text-align: center;   */
+}
+
+.explorer-button {
+    background-color: #003e299b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    outline: none;
+    font-weight: 600;
+    border: 3px solid rgba(0, 0, 0, 0.238);
+}
+
+.explorer-button:hover {
+    background-color: #003e29c2; /* Darker shade for hover effect */
+    transform: scale(1.05); /* Slightly grow on hover */
+    font-weight: 700;
+    /* border:none; */
+}
+
+.explorer-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  #box2 span a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #010102;
+    transition: transform 0.25s ease-out;
+  }
+
+  #box2 span a:hover::after {
+    transform: scaleX(1);
+  }
+
+  #box2 span a::after {
+    transform-origin: bottom center;
+  }
+
+  #box2 span a:hover::after {
+    transform-origin: bottom center;
+  }
+
+  #colage_holder{
+    /* margin:2vw; */
+    height:40vw;
+    width:100%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    box-sizing: border-box;
+ 
+    
+}
+
+#colage{
+    padding:0 7vw;
+    height:92%;
+    width:95%;
+    background-color:#18453b85;
+    /* border: 2px solid black; */
+    /* border-radius:25px ; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    gap:6vw;
+  }
+
+#image{
+    /* position: relative;
+    right:0; */
+  height:93%;
+  width:30%;
+  /* border:3px solid black; */
+  border-radius:1vw;
+  box-shadow: 2px 2px 5px black;
+  overflow: hidden;
+  transition: all 0.5s;
+
+
+  &:hover{
+    transform: scale(0.9);
+    /* display: none; */
+    border-radius: 0.4vw;
+  }
+}
+
+#image img{
+    height: 100%;
+    width:100%;
+}
+
+#image_content{
+    width:60%;
+    color:white;
+    line-height: 3vw;
+   
+}
+
+#image_content h2{
+    font-size:2vw;
+    margin-bottom:1.4vw;
+    font-weight:800;
+    &:hover{
+        text-decoration: underline rgb(13, 79, 19);
+       
+    }
+}
+
+#image_content p{
+    font-size:1.2vw;
+    line-height:2.4vw;
+}
+
+#colage1{
+    padding:0 7vw;
+    height:92%;
+    width:95%;
+    background-color:#18453b85;
+    /* border: 2px solid black; */
+    /* border-radius:25px ; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    gap:8vw;
+}
+
+footer{
+    height:15vw;
+    background-color: rgba(255, 255, 255, 0.46);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer_logo{
+    width:30%;
+    height:auto;
+    border:3px solid rgb(25, 76, 44)
+}
+
+#box3{
+    height:8vw;
+    width:50%;
+    /* border:2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1.7vw;
+}
+
+#social_holder span i{
+    font-size:2.5vw;
+    &:hover{
+        color:#015e3f;
+        
+    }
+}
+
+#social_holder span{
+    &:hover{
+        cursor: pointer;
+       
+    }
+}
+
+#social_holder{
+    height:3vw;
+    width:auto;
+    /* border:2px solid black; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap:6vw;
+}
+
+.vl {
+    border-left: 6px solid green;
+    height: 10vw;
+    
+   
+  }
+
+  #social_holder a{
+    text-decoration: none;
+    color:black;
+    transition: all 0.3s;
+    &:hover{
+        transform: scale(1.150);
+    }  
+  }
+
+  @media (min-width: 350px) and (max-width: 750px){
+    #hero{
+        height:100vh;
+    }
+    #anibut{
+        padding:1vw 2vw;
+        font-size: 3vw;
+    }
+
+    #hero1{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav{
+        height:12vw;
+    }
+    #box2 span{
+        font-size: 3vw;
+    }
+
+    #logo_img h1 {
+        font-size: 4vw;
+    }
+
+    #box2 {
+        gap:4vw
+    }
+
+    #content h1 {
+        margin-top: 5vw;
+    }
+
+    #just p{
+        font-size:3vw
+    }
+  }

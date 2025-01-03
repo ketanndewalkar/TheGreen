@@ -1,0 +1,2 @@
+menu <i class="fa-solid fa-bars"></i>
+cross <i class="fa-solid fa-xmark"></i>

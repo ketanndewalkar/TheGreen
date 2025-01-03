@@ -1,0 +1,550 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    width:100vw;
+    height:100%;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+main{
+    width:100%;
+    height:100vh;
+    background-color: #003e2900;
+}
+
+nav{
+    background-color: rgba(0, 104, 74, 0.264);
+    height:5.7vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding:0 6vw;
+    z-index: 99;
+    position: relative;
+    /* top:0; */
+    /* border-radius:7vw; */
+    /* border: 2px solid red; */
+}
+
+#logo{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+#logo_img h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2.4vw;
+    gap:0.3vw;
+    color: #003e29;
+}
+
+#logo_img img{
+    height:2.4vw;
+    fill:#003e29;
+}
+
+#box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5vw;;
+    gap:4vw;
+    
+}
+
+#box2 span{
+    font-family: 'Segoe UI';
+    font-size:1.22vw;
+    font-weight:750;
+    /* border: 1px solid black; */
+    &:hover{
+       cursor: pointer;
+       transform: scale(1.1);
+    }
+}
+
+#box2 span a{
+    text-decoration: none;
+    color:black;
+    /* text-decoration :underline 2px #015e3f; */
+    &:hover{
+        color:#015e3f;
+        transform: scale(1.1);
+        /* text-decoration: underline #015e3f ; */
+    }
+}
+
+
+  #box2 span a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #010102;
+    transition: transform 0.25s ease-out;
+  }
+
+  #box2 span a:hover::after {
+    transform: scaleX(1);
+  }
+
+  #box2 span a::after {
+    transform-origin: bottom center;
+  }
+
+  #box2 span a:hover::after {
+    transform-origin: bottom center;
+  }
+
+  #information_hero{
+    width:100vw;
+    height:auto;
+    margin:0;
+    padding:1vw 0;
+    background-color: rgba(221, 221, 221, 0.747);
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .tree-list {
+    box-sizing: border-box;
+    padding:0.2vw 1vw;
+    width: 17%; /* Set a fixed width */
+    height:86.5vh;
+    position:sticky;
+    top:20px;
+    margin-left: 4vw;
+    /* overflow-x: auto; Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of items */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tree-list ul {
+    border-radius:0.4vw;
+    border: 2px solid #ccc;
+    display: flex; /* Use flexbox for horizontal layout */
+    padding: 0;
+    margin: 0;
+    width:100%;
+    height:100%;
+    flex-direction: column;
+    overflow-y:auto ;position:sticky;
+    top:2vw;
+}
+
+.tree-list ul::-webkit-scrollbar {
+    display: none;
+  }
+
+.tree-list li {
+    width:90.8%;
+    list-style: none;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    display:flex;
+    justify-content: space-between;
+    font-weight: 400;
+    /* box-sizing: border-box; */
+    margin-right: 10px; /* Space between items */
+}
+
+.tree-list li i{
+    padding-top:0.1vw;
+    display:none;
+}
+
+.tree-list li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: black; /* Color of the underline */
+    transform: scaleX(0); /* Start with scale 0 */
+    transition: transform 0.3s ease; /* Animation duration */
+}
+
+.tree-list li.underlined::after {
+    transform: scaleX(1); /* Scale to full width when underlined */
+}
+
+/* Scrollbar styling for WebKit browsers */
+.tree-list::-webkit-scrollbar {
+    height: 8px; /* Height of the scrollbar */
+}
+
+.tree-list::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+.tree-list::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+.tree-list::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb on hover */
+}
+
+#hero_info{
+    /* margin:1vw; */
+    box-sizing: border-box;
+    width:78vw;
+    /* height:86.5vh; */
+    height:100%;
+    /* background-color: black; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc;
+    border-radius: 0.4vw;
+    background-color: rgba(189, 252, 234, 0.147);
+    padding: 0 2vw;
+    overflow-y:auto ;
+    &::-webkit-scrollbar{
+        width:8px;
+    }
+}
+  
+/* hero */
+
+
+.plant-container {
+    /* border: 2px solid black; */
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff00;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.plant-container h1{
+    text-align: left;
+    
+}
+.plant-name {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.plant-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.overview, .classification, .origin-habitat, .physical-characteristics, .care-instructions, .uses-benefits h2 {
+    color: #34495e;
+    margin-top: 20px;
+}
+
+.overview, .classification, .origin-habitat, .physical-characteristics, .care-instructions, .uses-benefits ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Additional animations for sections */
+.overview, .classification, .origin-habitat, .physical-characteristics, .care-instructions, .uses-benefits {
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.overview {
+    animation-delay: 0.2s;
+}
+.classification {
+    animation-delay: 0.4s;
+}
+.origin-habitat {
+    animation-delay: 0.6s;
+}
+.physical-characteristics {
+    animation-delay: 0.8s;
+}
+.care-instructions {
+    animation-delay: 1s;
+}
+.uses-benefits {
+    animation-delay: 1.2s;
+
+}
+.img{
+    width:80%;
+    height:60vh;
+    margin:1vw 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0.7vw;
+    opacity: 1;
+    /* border:2px solid rgba(0, 0, 0, 0.491); */
+    transition: all 0.2s linear 0s;
+    &:hover{
+        transform: scale(0.98);
+        cursor: pointer;
+    }
+}
+
+
+
+footer{
+    height:15vw;
+    background-color: rgba(255, 255, 255, 0.46);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#footer_logo{
+    width:30%;
+    height:auto;
+    border:3px solid rgb(25, 76, 44)
+}
+
+#box3{
+    height:8vw;
+    width:50%;
+    /* border:2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1.7vw;
+}
+
+#box3 h2{
+    font-size:2vw;
+}
+
+#social_holder span i{
+    font-size:2.5vw;
+    &:hover{
+        color:#015e3f;
+        
+    }
+}
+
+#social_holder span{
+    &:hover{
+        cursor: pointer;
+       
+    }
+}
+
+#social_holder{
+    height:3vw;
+    width:auto;
+    /* border:2px solid black; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap:6vw;
+}
+
+.vl {
+    border-left: 6px solid green;
+    height: 10vw;
+    
+   
+  }
+
+  #social_holder a{
+    text-decoration: none;
+    color:black;
+    transition: all 0.3s;
+    &:hover{
+        transform: scale(1.150);
+    }  
+  }
+
+  .plant-name{
+    margin-top:1vw;
+    font-size: 2.5vw;
+  }
+
+  .overview h2,.classification h2,.origin-habitat h2,.physical-characteristics h2,.care-instructions h2,.uses-benefits h2{
+    font-size: 2.1vw;
+  }
+
+  .classification p,.overview p,.origin-habitat p,.physical-characteristics ul li,.care-instructions ul li,.uses-benefits p{
+    font-size:1.2vw;
+    margin-left: 0.5vw;
+  }
+
+  .uses-benefits{
+    padding-left: 1.5vw;
+  }
+
+  .plant-container_header{
+    font-size: 2vw;
+  }
+
+  .tree-list{
+    position:sticky;
+    top:20px;
+  }
+
+  #control{
+    display:none;
+  }
+
+  #control #handle{
+    display:none;
+  }
+
+  #box2{
+    display:none;
+  }
+
+  @media (min-width: 350px) and (max-width: 1160px){
+
+    #control .icons{
+        font-size:4.7vw;
+
+        &:hover{
+            cursor:pointer;
+        }
+    }
+
+    #control .cross{
+        display:none;
+    }
+    
+    #control{
+        width:8vw;
+        display: flex;
+        align-items:center;
+        justify-content:space-between;
+        /* border:2px solid black; */
+        height:100%;
+    }
+    nav{
+        height:12vw;
+    }
+    #box2 span{
+        font-size: 3.4vw;
+        
+    }
+
+    #box2 {
+        gap:5vw;
+        width: 100%;
+        padding: 9vw 5vw;
+        box-sizing: border-box;
+        background-color: rgb(187 223 213);
+        flex-direction: column;
+        position: absolute;
+        top: 12vw;
+        left: 0;
+        border-top: 0.7vw solid rgb(147 186 176);
+        border-bottom: 0.7vw solid #0000004f;
+        border-radius: 0 0 2vw 2vw;
+    }
+
+    #logo_img h1 {
+        font-size: 4vw;
+    }
+
+    #box2 {
+        gap:4vw
+    }
+
+    #information_hero{
+        flex-direction: column;
+    }
+
+    .tree-list{
+        width:100%;
+        height:8vw;
+        box-sizing: border-box;
+        margin:0;
+        height: 7.5vw;
+        /* margin-left:5vw */
+        position:static;
+    }
+
+    .tree-list ul{
+        flex-direction: row;
+        font-size:3vw
+    }
+
+    .tree-list li{
+        margin-right:4vw
+    }
+
+    .tree-list li i{
+        display:none;
+    }
+
+    #hero_info{
+        width: 100%;
+        margin:1vw 0;
+        /* margin-left:6vw; */
+
+    }
+
+    .plant-name {
+        font-size:4vw
+    }
+
+    .plant-container_header{
+        font-size:4vw
+    }
+
+    .img {
+        width:80%;
+        height: 40vw;
+    }
+    .overview h2, .classification h2, .origin-habitat h2, .physical-characteristics h2, .care-instructions h2, .uses-benefits h2{
+        font-size: 3vw;
+    }
+
+    .classification p,.overview p,.origin-habitat p,.physical-characteristics ul li,.care-instructions ul li,.uses-benefits p{
+        font-size: 2.4vw;
+    }
+
+    #social_holder span i{
+        font-size: 4vw;
+    }
+
+  }
